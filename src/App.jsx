@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import './App.css';
 
 
+import * as parser from './lib/index.js';
+
+
 
 function draw_board(canvas) {
   const square_size = 75;
@@ -21,6 +24,9 @@ function draw_board(canvas) {
 
   ctx.strokeStyle = 'black';
   ctx.strokeRect(x, y, square_size * 8, square_size * 8);
+  const state = parser.parse("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
+  console.log('game state: ', state);
+
 }
 
 
