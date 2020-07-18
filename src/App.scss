@@ -1,0 +1,60 @@
+$dark-color: #7d7d96;
+$light-color: lighten($dark-color, 40%);
+
+.board-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+
+    .square {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        width: 100%;
+        height: 100%;
+
+
+        &.piece {
+            cursor: pointer;
+            transition: all 0.1s ;
+            
+            &:hover { background-size: 90%; }
+        }
+
+
+        &.dark { background-color: $dark-color; }
+        &.light { background-color: $light-color; }
+
+        &.K { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Chess_klt45.svg'); }
+        &.Q { background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/15/Chess_qlt45.svg'); }
+        &.B { background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b1/Chess_blt45.svg'); }
+        &.N { background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg'); }
+        &.R { background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg'); }
+        &.P { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg'); }
+        &.k { background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f0/Chess_kdt45.svg'); }
+        &.q { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg'); }
+        &.b { background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/98/Chess_bdt45.svg'); }
+        &.n { background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg'); }
+        &.r { background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg'); }
+        &.p { background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Chess_pdt45.svg'); }
+    }
+
+}
+
+
+
+
+
+
+
